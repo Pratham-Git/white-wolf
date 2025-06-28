@@ -997,7 +997,7 @@ const ProductGrid: React.FC = () => {
             >
               {/* Background Image */}
               <img
-                src={category.image}
+                src={`${import.meta.env.BASE_URL}${category.image.replace(/^\//, '')}`}
                 alt={category.name}
                 className="absolute inset-0 w-full h-full object-cover object-center transition-transform duration-500 group-hover:scale-105 group-hover:brightness-90"
               />
@@ -1043,7 +1043,7 @@ const ProductGrid: React.FC = () => {
           >
             <div className="flex items-center justify-center mb-4">
               <img
-                src={selectedCategory.image}
+                src={`${import.meta.env.BASE_URL}${selectedCategory.image.replace(/^\//, '')}`}
                 alt={selectedCategory.name}
                 className="w-16 h-16 sm:w-20 sm:h-20 lg:w-24 lg:h-24 object-contain mr-4"
               />
@@ -1104,7 +1104,7 @@ const ProductGrid: React.FC = () => {
               {/* Product Image */}
               <div className="relative overflow-hidden bg-gray-50 p-4 sm:p-6 lg:p-8">
                 <img
-                  src={product.image}
+                  src={`${import.meta.env.BASE_URL}${product.image.replace(/^\//, '')}`}
                   alt={product.name}
                   className="w-full h-40 sm:h-48 lg:h-64 object-contain transition-transform duration-500 group-hover:scale-110"
                 />
