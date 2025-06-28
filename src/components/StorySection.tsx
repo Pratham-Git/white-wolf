@@ -250,7 +250,7 @@ const StorySection: React.FC = () => {
           >
             <div className="aspect-square rounded-3xl overflow-hidden bg-white p-8 border border-gray-200 shadow-lg">
               <img 
-                src="WHITE_WOLF_LOGO_BLACK-01.png" 
+                src={`${import.meta.env.BASE_URL}WHITE_WOLF_LOGO_BLACK-01.png`} 
                 alt="White Wolf Nutrition"
                 className="w-full h-full object-contain"
               />

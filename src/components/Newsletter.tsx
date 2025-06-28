@@ -45,7 +45,7 @@ const Newsletter: React.FC = () => {
                   {/* Header */}
                   <div className="flex items-center space-x-3 mb-4">
                     <img 
-                      src="WHITE_WOLF_LOGO_BLACK-01.png" 
+                      src={`${import.meta.env.BASE_URL}WHITE_WOLF_LOGO_BLACK-01.png`} 
                       alt="White Wolf"
                       className="h-8 w-auto"
                     />

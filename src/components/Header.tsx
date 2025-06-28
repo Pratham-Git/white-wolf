@@ -36,7 +36,7 @@ const Header: React.FC = () => {
             className="flex items-center space-x-3"
           >
             <img 
-              src="WHITE_WOLF_LOGO_BLACK-01.png" 
+              src={`${import.meta.env.BASE_URL}WHITE_WOLF_LOGO_BLACK-01.png`} 
               alt="White Wolf Nutrition"
               className="h-8 sm:h-10 lg:h-12 w-auto"
             />
