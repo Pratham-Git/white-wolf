@@ -127,12 +127,12 @@ const Hero: React.FC = () => {
               <div className="relative w-[420px] h-[480px] sm:w-[525px] sm:h-[600px] md:w-[600px] md:h-[675px] lg:w-[750px] lg:h-[825px] xl:w-[825px] xl:h-[900px] flex items-center justify-center">
                 {/* Animated Product GIF */}
                 <img
-                  src={"/mega-bulkmassgainer.gif"}
+                  src={`${import.meta.env.BASE_URL}mega-bulkmassgainer.gif`}
                   alt="White Wolf Mega Bulk Mass Gainer - Animated"
                   className="w-full h-full object-contain drop-shadow-2xl"
                   onError={(e) => {
                     const target = e.target as HTMLImageElement;
-                    target.src = "/Mega_Bulk_Belgium_Chocolate_1kg-01.jpg";
+                    target.src = `${import.meta.env.BASE_URL}Mega_Bulk_Belgium_Chocolate_1kg-01.jpg`;
                   }}
                 />
                 
