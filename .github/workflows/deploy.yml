@@ -4,6 +4,8 @@ on:
   push:
     branches: [ main ]
   workflow_dispatch:
+  repository_dispatch:
+    types: [deploy]
 
 permissions:
   contents: read
@@ -36,6 +38,7 @@ jobs:
       - name: Verify build output
         run: |
           echo "=== BUILD VERIFICATION ==="
+          echo "Build timestamp: $(date)"
           echo "Checking dist folder contents:"
           ls -la dist/
           echo ""
