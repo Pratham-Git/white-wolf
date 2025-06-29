@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "build": "vite build --base=/white-wolf/",
     "build:prod": "VITE_BASE=/white-wolf/ vite build",
     "lint": "eslint .",
     "preview": "vite preview",
