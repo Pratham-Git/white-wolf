@@ -7,6 +7,7 @@
     "dev": "vite",
     "build": "vite build --base=/white-wolf/",
     "build:prod": "VITE_BASE=/white-wolf/ vite build",
+    "build:force": "echo 'Build timestamp: $(date)' && vite build --base=/white-wolf/",
     "lint": "eslint .",
     "preview": "vite preview",
     "postbuild": "cp dist/index.html dist/404.html"

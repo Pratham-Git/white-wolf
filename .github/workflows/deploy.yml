@@ -30,17 +30,26 @@ jobs:
       - name: Install dependencies
         run: npm ci
       
-      - name: Build
-        run: npm run build
+      - name: Build with cache busting
+        run: npm run build:force
       
       - name: Verify build output
         run: |
+          echo "=== BUILD VERIFICATION ==="
           echo "Checking dist folder contents:"
           ls -la dist/
+          echo ""
           echo "Checking index.html:"
           cat dist/index.html
+          echo ""
           echo "Checking 404.html:"
           cat dist/404.html
+          echo ""
+          echo "Checking if vite.svg exists in dist:"
+          ls -la dist/vite.svg || echo "vite.svg not found in dist"
+          echo ""
+          echo "Checking public folder:"
+          ls -la public/vite.svg || echo "vite.svg not found in public"
       
       - name: Setup Pages
         uses: actions/configure-pages@v4
